@@ -23,4 +23,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[BSD](https://opensource.org/licenses/BSD-3-Clause)
+[LICENSE.md](https://github.com/kkamara/octobercms/blob/main/LICENSE.md)
