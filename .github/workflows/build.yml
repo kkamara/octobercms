@@ -51,7 +51,7 @@ jobs:
             sed -i -e "s/DB_HOST=mysql/DB_HOST=127.0.0.1/g" .env
             sed -i -e "s/local/testing/g" .env
       - name: Run OctoberCMS Server
-        run: php artisan serve --no-reload &
+        run: php artisan serve &
       - name: curl to localhost
         run: curl localhost:8000 &
       - name: Run Tests
