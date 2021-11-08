@@ -2,9 +2,12 @@ docker-setup:
 	docker-compose build # let's build our services
 	docker-compose up -d # get services running
 
+backend-migrate:
+	@docker exec octobercms-app php artisan october:migrate
+
 backend-setup:
 	@docker exec octobercms-app composer i
-	@docker exec octobercms-app php artisan october:migrate
+	backend-migrate
 	@docker exec octobercms-app php artisan project:set "${OCTOBERCMS_LICENSE}"
 
 clean-js:
