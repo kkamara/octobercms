@@ -7,7 +7,7 @@ backend-migrate:
 
 backend-setup:
 	@docker exec octobercms-app composer i
-	backend-migrate
+	make backend-migrate
 	@docker exec octobercms-app php artisan project:set "${OCTOBERCMS_LICENSE}"
 
 clean-js:
